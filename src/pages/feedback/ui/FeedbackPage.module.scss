@@ -1,0 +1,117 @@
+@import 'src/app/styles/variables/global.scss';
+
+.FeedbackPage {
+    padding-top: 21px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.infoBlock {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 530px;
+}
+
+.firstText {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+}
+
+.secondText {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+}
+
+.thirdText {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--color-primary-200)
+} 
+
+.iconContainer {
+    height: 200px;
+    width: 455px;
+}
+
+
+.markBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.markList {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.markItem {
+    font-size: 14px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--color-accent-200);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.markText {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: map-get($breakpoints, dekstop)) {
+
+}
+
+@media (max-width: map-get($breakpoints, tablet)) {
+    .infoBlock {
+        gap: 14px;
+    }
+}
+
+@media (max-width: map-get($breakpoints, mobile)) {
+    .iconContainer {
+        width: 374px;
+        height: 165px;
+    }
+
+    .infoBlock {
+        gap: 14px;
+        max-width: 340px;
+    }
+
+    .firstText {
+        font-size: 22px;
+    }
+
+    .secondText {
+        font-size: 12px;
+    }
+
+    .markList {
+        justify-content: center;
+        grid-template-columns: repeat(5, 40px);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 10px;
+        column-gap: 5.75px;
+    }
+
+    .markText {
+        padding: 0 32px 0 32px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

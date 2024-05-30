@@ -1,0 +1,40 @@
+@import "./reset.scss";
+@import "./variables/global.scss";
+@import "./themes/dark.scss";
+
+html,
+body {
+    height: 100%;
+}
+
+.app {
+    box-sizing: border-box;
+    height: 100vh;
+    background: var(--bg-color);
+    font: var(--font-m);
+    color: var(--color-primary-100);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 113.5px;
+}
+
+@media (max-width: map-get($breakpoints, dekstop)) {
+    .container {
+            padding: 0 113.5px;
+        }
+}
+
+@media (max-width: map-get($breakpoints, tablet)) {
+    .container {
+        padding: 0;
+    }
+}
+
+@media (max-width: map-get($breakpoints, mobile)) {
+    .container {
+        padding: 0;
+    }
+}
