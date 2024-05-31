@@ -66,6 +66,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.markItem:hover {
+    background-color: var(--color-accent-200);
+    transition: background-color 0.3s ease
 }
 
 .markText {
@@ -99,14 +105,6 @@
 
     .secondText {
         font-size: 12px;
-    }
-
-    .markList {
-        justify-content: center;
-        grid-template-columns: repeat(5, 40px);
-        grid-template-rows: repeat(2, 1fr);
-        row-gap: 10px;
-        column-gap: 5.75px;
     }
 
     .markText {

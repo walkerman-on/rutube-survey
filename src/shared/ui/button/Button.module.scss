@@ -1,0 +1,25 @@
+@import 'src/app/styles/variables/global.scss';
+
+.Btn {
+    padding: 12px 49px;
+    gap: 0px;
+    border-radius: 22px;
+    opacity: 0px;
+    background-color: var(--color-accent-100);
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.Btn:hover {
+    background-color: var(--color-accent-200);
+    transition: background-color 0.3s ease
+}
+
+@media (max-width: map-get($breakpoints, mobile)) {
+    .Btn {
+        // padding: 10px;
+        width: 100%;
+    }
+}
+

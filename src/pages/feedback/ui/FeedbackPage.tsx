@@ -1,7 +1,9 @@
 import cl from "./FeedbackPage.module.scss"
 import PeopleIcon from "shared/assets/img/people.svg"
+import { NavLink } from "react-router-dom";
+import { getQuestions } from "app/providers/router/routeConfig/routes";
+import { Mark } from "widgets/mark";
 
-const markList:number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 const FeedbackPage = () => {
     return (
@@ -16,11 +18,14 @@ const FeedbackPage = () => {
                     «Хуже некуда» и 9 — «Отлично».
                 </p>
                 <div className={cl.markBlock}>
-                    <ul className={cl.markList}>
-                        {markList?.map((item, index) => 
-                            <li className={cl.markItem} key={index}>{item}</li>
+                    {/* <ul className={cl.markList}>
+                        {markList?.map((item, index) =>
+                            <NavLink to={getQuestions()}>
+                                <li className={cl.markItem} key={index}>{item}</li>
+                            </NavLink> 
                         )}
-                    </ul>
+                    </ul> */}
+                        <Mark linkTo={getQuestions()}/> 
                     <p className={cl.markText}>
                         <span className={cl.thirdText}>Хуже некуда</span>
                         <span className={cl.thirdText}>Отлично</span>

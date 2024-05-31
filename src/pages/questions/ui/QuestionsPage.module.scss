@@ -1,0 +1,85 @@
+@import 'src/app/styles/variables/global.scss';
+
+.QuestionsPage {
+    padding-top: 25px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center
+
+}
+.title {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: var(--color-primary-200)
+}
+
+.questionsBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 28px
+}
+
+.questionsGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.questionsText {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: var(--color-primary-100)
+}
+
+
+.imgBlock {
+    // display: flex;
+    // align-items: center
+
+}
+
+.imgContainer {
+    padding-top: 95px;
+    height: 540px;
+    width: 581px;
+}
+
+.questionsItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+@media (max-width: map-get($breakpoints, dekstop)) {
+
+}
+
+@media (max-width: map-get($breakpoints, tablet)) {
+    .QuestionsPage {
+        padding: 25px 16px 24px 16px;
+    }
+
+    .imgContainer {
+            height: 509px;
+            width: 548px;
+    }
+}
+
+@media (max-width: map-get($breakpoints, mobile)) {
+    .imgContainer {
+        display: none;
+    }
+
+    .questionsBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px
+    }
+
+}

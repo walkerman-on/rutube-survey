@@ -4,6 +4,7 @@ import { getFeedback, getQuestions, getMain, getNotFound, getResult } from 'app/
 import { NotFoundPage } from 'pages/notFound';
 import { MainPage } from 'pages/main';
 import { ResultPage } from 'pages/result';
+import { QuestionsPage } from 'pages/questions';
 
 export enum AppRoutes {
   FEEDBACK = 'feedback',
@@ -32,7 +33,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   },
   [AppRoutes.QUESTIONS]: {
     path: RoutePath.questions,
-    element: <NotFoundPage />,
+    element: <QuestionsPage />,
   },
   [AppRoutes.MAIN]: {
     path: RoutePath.main,
