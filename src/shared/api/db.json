@@ -127,6 +127,10 @@
             "title": "Какова вероятность того, что вы порекомендуете RUTUBE коллеге или другу?",
             "responseVariants": [
                 {
+                    "responseVariantID": 0, 
+                    "title": "0"
+                },
+                {
                     "responseVariantID": 1, 
                     "title": "1"
                 },

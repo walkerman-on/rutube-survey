@@ -1,12 +1,7 @@
-import axios from "axios";
+import axios from 'axios';
 
-export default class api {
-    static async getAll() {
-        try {
-            const response = await axios.get("http://localhost:3001/questions")
-            return response.data
-        } catch (e) {
-            console.log(e)
-        }
-    }
-}
+const __API__ = 'http://localhost:3001';
+
+export const $api = axios.create({
+  baseURL: __API__,
+});

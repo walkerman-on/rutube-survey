@@ -24,6 +24,10 @@
     transition: background-color 0.3s ease
 }
 
+.markItemActive {
+    background-color: var(--color-accent-200);
+}
+
 @media (max-width: map-get($breakpoints, mobile)) {
     .markList {
             justify-content: center;
