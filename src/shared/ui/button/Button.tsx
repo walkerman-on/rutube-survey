@@ -1,10 +1,15 @@
-import { FC, memo } from "react";
+import { FC, memo, ButtonHTMLAttributes } from "react";
 import cl from "./Button.module.scss"
 
-export const Button:FC= memo((props) => {
+interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
+}
+
+export const Button:FC<IButton>= memo((props, {disabled}) => {
     return (
         <button {...props} className = {cl.Btn}>
-            {props.children}
+            <span className={cl.text}>
+                {props.children}
+            </span>
         </button>
     );
 });

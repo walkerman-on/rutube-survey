@@ -16,6 +16,20 @@
     transition: background-color 0.3s ease
 }
 
+.Btn:disabled {
+    background-color: var(--color-primary-200);
+    cursor: not-allowed;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+
+
+
 @media (max-width: map-get($breakpoints, mobile)) {
     .Btn {
         // padding: 10px;

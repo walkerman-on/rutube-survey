@@ -1,12 +1,17 @@
 import cl from "./FeedbackPage.module.scss"
 import PeopleIcon from "shared/assets/img/people.svg"
-import { NavLink } from "react-router-dom";
-import { getQuestions } from "app/providers/router/routeConfig/routes";
+import { NavLink, Navigate } from 'react-router-dom';
+import { getCompletedSurvey, getQuestions } from "app/providers/router/routeConfig/routes";
 import { Mark } from "widgets/mark";
+import { useQuestionsCompleted } from "shared/lib/hooks/useQuestionsCompited/useQuestionsCompited";
 
 
 const FeedbackPage = () => {
-    return (
+    const {isCompleted} = useQuestionsCompleted()
+
+    return isCompleted ? (
+        <Navigate to={getCompletedSurvey()} />
+    ) : (
         <main className={cl.FeedbackPage}>
             <div className={cl.iconContainer} >
                 <PeopleIcon className={cl.peopleIcon}/>
@@ -18,14 +23,7 @@ const FeedbackPage = () => {
                     «Хуже некуда» и 9 — «Отлично».
                 </p>
                 <div className={cl.markBlock}>
-                    {/* <ul className={cl.markList}>
-                        {markList?.map((item, index) =>
-                            <NavLink to={getQuestions()}>
-                                <li className={cl.markItem} key={index}>{item}</li>
-                            </NavLink> 
-                        )}
-                    </ul> */}
-                        <Mark linkTo={getQuestions()}/> 
+                    <Mark linkTo={getQuestions()}/> 
                     <p className={cl.markText}>
                         <span className={cl.thirdText}>Хуже некуда</span>
                         <span className={cl.thirdText}>Отлично</span>

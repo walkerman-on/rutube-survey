@@ -1,9 +1,10 @@
 import React from 'react';
+import cl from "./MainPage.module.scss"
 
 const MainPage = () => {
     return (
-        <main>
-            MainPage
+        <main className={cl.MainPage}>
+            <span>Это главная страница RUTUBE</span>
         </main>
     );
 };
