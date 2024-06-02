@@ -1,21 +1,20 @@
-import { createAsyncThunk } from "@reduxjs/toolkit"
-import { $api } from "shared/api/api";
-import { IQuestion } from "../types/types";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { $api } from 'shared/api/api';
+import { IQuestion } from '../types/types';
 
-export const fetchQuestions = createAsyncThunk<IQuestion[], void, {rejectValue: string}>(
-	"fetchQuestions",
-	async (_, { rejectWithValue }) => {
-		try {
-			const response = await $api.get<IQuestion[]>(`/questions`);
+export const fetchQuestions = createAsyncThunk<IQuestion[], void, { rejectValue: string }>(
+  'fetchQuestions',
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await $api.get<IQuestion[]>(`/questions`);
 
-	        if (!response.data) {
-        		throw new Error();
-      		}
-		
-			return response.data
+      if (!response.data) {
+        throw new Error();
+      }
 
-		} catch (error) {
-			return rejectWithValue(error.message)
-		}
-	}
-)
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  },
+);

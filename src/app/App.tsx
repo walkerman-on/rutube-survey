@@ -3,13 +3,15 @@ import { AppRouter } from './providers/router';
 import { Header } from 'widgets/header';
 import './styles/index.scss';
 
-const App = () => {
+import './styles/index.scss';
+
+function App() {
   return (
-      <div className='app container dark'>
-        <Header/>
-        {AppRouter(routeConfig)}
-      </div>
+    <div className="app container dark">
+      <Header />
+      {AppRouter(routeConfig)}
+    </div>
   );
-};
+}
 
 export default App;

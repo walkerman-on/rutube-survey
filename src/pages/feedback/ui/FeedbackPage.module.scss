@@ -1,4 +1,4 @@
-@import 'src/app/styles/variables/global.scss';
+@import "src/app/styles/variables/global";
 
 .FeedbackPage {
     flex: 1;
@@ -43,9 +43,9 @@
 }
 
 @media (max-width: map-get($breakpoints, tablet)) {
-    .infoBlock {
-        gap: 14px;
-    }
+  .infoBlock {
+    gap: 14px;
+  }
 }
 
 @media (max-width: map-get($breakpoints, mobile)) {

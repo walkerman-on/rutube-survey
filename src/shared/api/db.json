@@ -1,222 +1,182 @@
 {
-    "questions": [
+  "questions": [
+    {
+      "qiestionID": 1,
+      "title": "Как быстро вы получили ответ от клиентского сервиса RUTUBE?",
+      "responseVariants": [
         {
-            "questionID": 0, 
-            "title": "Запрос закрыт. Пожалуйста, оцените качество предоставленного сервиса по данному обращению, используя шкалу от 0 до 9, где 0 является «Хуже некуда» и 9 — «Отлично».",
-            "responseVariants": [
-                {
-                    "responseVariantID": 0, 
-                    "title": "0"
-                },
-                {
-                    "responseVariantID": 1, 
-                    "title": "1"
-                },
-                {
-                    "responseVariantID": 2, 
-                    "title": "2"
-                },
-                {
-                    "responseVariantID": 3, 
-                    "title": "3"
-                },
-                {
-                    "responseVariantID": 4, 
-                    "title": "4"
-                },
-                {
-                    "responseVariantID": 5, 
-                    "title": "5"
-                },
-                {
-                    "responseVariantID": 6, 
-                    "title": "6"
-                },
-                {
-                    "responseVariantID": 7, 
-                    "title": "7"
-                },
-                {
-                    "responseVariantID": 8, 
-                    "title": "8"
-                },
-                {
-                    "responseVariantID": 9, 
-                    "title": "9"
-                }
-            ]
+          "responseVariantID": 1,
+          "title": "Быстрее, чем ожидал"
         },
         {
-            "questionID": 1, 
-            "title": "1. Как быстро вы получили ответ от клиентского сервиса RUTUBE?*",
-            "responseVariants": [
-                {
-                    "responseVariantID": 1, 
-                    "title": "Быстрее, чем ожидал"
-                },
-                {
-                    "responseVariantID": 2, 
-                    "title": "Как и ожидал"
-                },
-                {
-                    "responseVariantID": 3, 
-                    "title": "Медленнее, чем ожидал"
-                }
-            ]
+          "responseVariantID": 2,
+          "title": "Как и ожидал"
         },
         {
-            "questionID": 2, 
-            "title": "2. Клиентский сервис RUTUBE помог в решении проблемы?*",
-            "responseVariants": [
-                {
-                    "responseVariantID": 1, 
-                    "title": "1"
-                },
-                {
-                    "responseVariantID": 2, 
-                    "title": "2"
-                },
-                {
-                    "responseVariantID": 3, 
-                    "title": "3"
-                },
-                {
-                    "responseVariantID": 4, 
-                    "title": "4"
-                },
-                {
-                    "responseVariantID": 5, 
-                    "title": "5"
-                }
-            ]
-        },
-        {
-            "questionID": 3, 
-            "title": "3. Специалист RUTUBE хорошо изъяснялся и владел языком?*",
-            "responseVariants": [
-                {
-                    "responseVariantID": 1, 
-                    "title": "1"
-                },
-                {
-                    "responseVariantID": 2, 
-                    "title": "2"
-                },
-                {
-                    "responseVariantID": 3, 
-                    "title": "3"
-                },
-                {
-                    "responseVariantID": 4, 
-                    "title": "4"
-                },
-                {
-                    "responseVariantID": 5, 
-                    "title": "5"
-                }
-            ]
-        },
-        {
-            "questionID": 4, 
-            "title": "4. Специалист RUTUBE был отзывчив?*",
-            "responseVariants": [
-                {
-                    "responseVariantID": 1, 
-                    "title": "1"
-                },
-                {
-                    "responseVariantID": 2, 
-                    "title": "2"
-                },
-                {
-                    "responseVariantID": 3, 
-                    "title": "3"
-                },
-                {
-                    "responseVariantID": 4, 
-                    "title": "4"
-                },
-                {
-                    "responseVariantID": 5, 
-                    "title": "5"
-                }
-            ]
-        },
-        {
-            "questionID": 5, 
-            "title": "5. Специалист RUTUBE был компетентен?*",
-            "responseVariants": [
-                {
-                    "responseVariantID": 1, 
-                    "title": "1"
-                },
-                {
-                    "responseVariantID": 2, 
-                    "title": "2"
-                },
-                {
-                    "responseVariantID": 3, 
-                    "title": "3"
-                },
-                {
-                    "responseVariantID": 4, 
-                    "title": "4"
-                },
-                {
-                    "responseVariantID": 5, 
-                    "title": "5"
-                }
-            ]
-        },
-        {
-            "questionID": 6, 
-            "title": "6. Какова вероятность того, что вы порекомендуете RUTUBE коллеге или другу?*",
-            "responseVariants": [
-                {
-                    "responseVariantID": 0, 
-                    "title": "0"
-                },
-                {
-                    "responseVariantID": 1, 
-                    "title": "1"
-                },
-                {
-                    "responseVariantID": 2, 
-                    "title": "2"
-                },
-                {
-                    "responseVariantID": 3, 
-                    "title": "3"
-                },
-                {
-                    "responseVariantID": 4, 
-                    "title": "4"
-                },
-                {
-                    "responseVariantID": 5, 
-                    "title": "5"
-                },
-                {
-                    "responseVariantID": 6, 
-                    "title": "6"
-                },
-                {
-                    "responseVariantID": 7, 
-                    "title": "7"
-                },
-                {
-                    "responseVariantID": 8, 
-                    "title": "8"
-                },
-                {
-                    "responseVariantID": 9, 
-                    "title": "9"
-                },
-                {
-                    "responseVariantID": 10, 
-                    "title": "10"
-                }
-            ]
+          "responseVariantID": 3,
+          "title": "Медленнее, чем ожидал"
         }
-    ]  
+      ]
+    },
+    {
+      "qiestionID": 2,
+      "title": "Клиентский сервис RUTUBE помог в решении проблемы?",
+      "responseVariants": [
+        {
+          "responseVariantID": 1,
+          "title": "1"
+        },
+        {
+          "responseVariantID": 2,
+          "title": "2"
+        },
+        {
+          "responseVariantID": 3,
+          "title": "3"
+        },
+        {
+          "responseVariantID": 4,
+          "title": "4"
+        },
+        {
+          "responseVariantID": 5,
+          "title": "5"
+        }
+      ]
+    },
+    {
+      "qiestionID": 3,
+      "title": "Специалист RUTUBE хорошо изъяснялся и владел языком?",
+      "responseVariants": [
+        {
+          "responseVariantID": 1,
+          "title": "1"
+        },
+        {
+          "responseVariantID": 2,
+          "title": "2"
+        },
+        {
+          "responseVariantID": 3,
+          "title": "3"
+        },
+        {
+          "responseVariantID": 4,
+          "title": "4"
+        },
+        {
+          "responseVariantID": 5,
+          "title": "5"
+        }
+      ]
+    },
+    {
+      "qiestionID": 4,
+      "title": "Специалист RUTUBE был отзывчив?",
+      "responseVariants": [
+        {
+          "responseVariantID": 1,
+          "title": "1"
+        },
+        {
+          "responseVariantID": 2,
+          "title": "2"
+        },
+        {
+          "responseVariantID": 3,
+          "title": "3"
+        },
+        {
+          "responseVariantID": 4,
+          "title": "4"
+        },
+        {
+          "responseVariantID": 5,
+          "title": "5"
+        }
+      ]
+    },
+    {
+      "qiestionID": 5,
+      "title": "Специалист RUTUBE был компетентен?",
+      "responseVariants": [
+        {
+          "responseVariantID": 1,
+          "title": "1"
+        },
+        {
+          "responseVariantID": 2,
+          "title": "2"
+        },
+        {
+          "responseVariantID": 3,
+          "title": "3"
+        },
+        {
+          "responseVariantID": 4,
+          "title": "4"
+        },
+        {
+          "responseVariantID": 5,
+          "title": "5"
+        }
+      ]
+    },
+    {
+      "qiestionID": 6,
+      "title": "Какова вероятность того, что вы порекомендуете RUTUBE коллеге или другу?",
+      "responseVariants": [
+        {
+          "responseVariantID": 0,
+          "title": "0"
+        },
+        {
+          "responseVariantID": 1,
+          "title": "1"
+        },
+        {
+          "responseVariantID": 2,
+          "title": "2"
+        },
+        {
+          "responseVariantID": 3,
+          "title": "3"
+        },
+        {
+          "responseVariantID": 4,
+          "title": "4"
+        },
+        {
+          "responseVariantID": 5,
+          "title": "5"
+        },
+        {
+          "responseVariantID": 6,
+          "title": "6"
+        },
+        {
+          "responseVariantID": 7,
+          "title": "7"
+        },
+        {
+          "responseVariantID": 8,
+          "title": "8"
+        },
+        {
+          "responseVariantID": 9,
+          "title": "9"
+        },
+        {
+          "responseVariantID": 10,
+          "title": "10"
+        }
+      ]
+    }
+  ],
+  "responses": [
+    {
+      "questionID": 1,
+      "responseID": 1
+    }
+  ]
 }

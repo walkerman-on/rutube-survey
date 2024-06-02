@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { questionsReducer } from 'entities/questions';
 import { answersReducer } from 'entities/answers';
+import { questionsReducer } from 'entities/questions';
 
 export const store = configureStore({
   reducer: {
     questions: questionsReducer,
-    answers: answersReducer
+    answers: answersReducer,
   },
 });

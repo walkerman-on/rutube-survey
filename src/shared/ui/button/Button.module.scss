@@ -1,39 +1,36 @@
-@import 'src/app/styles/variables/global.scss';
+@import "src/app/styles/variables/global";
 
 .Btn {
-    padding: 12px 49px;
-    gap: 0px;
-    border-radius: 22px;
-    opacity: 0px;
-    background-color: var(--color-accent-100);
-    text-align: center;
-    cursor: pointer;
-    box-sizing: border-box;
+  padding: 12px 49px;
+  gap: 0;
+  border-radius: 22px;
+  opacity: 0;
+  background-color: var(--color-accent-100);
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .Btn:hover {
-    background-color: var(--color-accent-200);
-    transition: background-color 0.3s ease
+  background-color: var(--color-accent-200);
+  transition: background-color 0.3s ease;
 }
 
 .Btn:disabled {
-    background-color: var(--color-primary-200);
-    cursor: not-allowed;
+  background-color: var(--color-primary-200);
+  cursor: not-allowed;
 }
 
 .text {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
-    text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
 }
-
-
 
 @media (max-width: map-get($breakpoints, mobile)) {
-    .Btn {
-        // padding: 10px;
-        width: 100%;
-    }
+  .Btn {
+    // padding: 10px;
+    width: 100%;
+  }
 }
-

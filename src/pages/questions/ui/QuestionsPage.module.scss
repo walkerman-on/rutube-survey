@@ -1,4 +1,4 @@
-@import 'src/app/styles/variables/global.scss';
+@import "src/app/styles/variables/global";
 
 .QuestionsPage {
     padding: 16px 0 24px 0;
@@ -10,11 +10,11 @@
 }
 
 .title {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 22px;
-    text-align: left;
-    color: var(--color-primary-200)
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: var(--color-primary-200);
 }
 
 .questionsBlock {
