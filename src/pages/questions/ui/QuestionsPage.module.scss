@@ -1,12 +1,12 @@
 @import "src/app/styles/variables/global";
 
 .QuestionsPage {
-    padding: 16px 0 24px 0;
-    flex: 1;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+  padding: 16px 0 24px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .title {
@@ -18,38 +18,37 @@
 }
 
 .questionsBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
-    max-width: 520px;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  max-width: 520px;
+  z-index: 1;
 }
 
-
 .imgContainer {
-    position: absolute;
-    right: 0;
-    top: 15%;
-    width: 581px;
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 581px;
 }
 
 @media (max-width: map-get($breakpoints, tablet)) {
-    .QuestionsPage {
-        padding: 16px 16px 24px 16px;
-    }
+  .QuestionsPage {
+    padding: 16px 16px 24px;
+  }
 
-    .imgContainer {
-        width: 548px;
-    }
+  .imgContainer {
+    width: 548px;
+  }
 }
 
 @media (max-width: map-get($breakpoints, mobile)) {
-    .QuestionsPage {
-        padding: 16px 16px 24px 16px;
-    }
+  .QuestionsPage {
+    padding: 16px 16px 24px;
+  }
 
-    .imgContainer {
-        display: none;
-    }
+  .imgContainer {
+    display: none;
+  }
 }

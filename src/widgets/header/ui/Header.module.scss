@@ -1,12 +1,12 @@
 @import "src/app/styles/variables/global";
 
 .logoContainer {
-    padding: 28px 0;
-    width: 148px;
+  padding: 28px 0;
+  width: 148px;
 }
 
 .lineContainer {
-    padding: 9px 0;
+  padding: 9px 0;
 }
 
 .line {
@@ -16,13 +16,13 @@
 }
 
 @media (max-width: map-get($breakpoints, tablet)) {
-    .logoContainer {
-        padding: 20px 0 20px 20px;
-    }
+  .logoContainer {
+    padding: 20px 0 20px 20px;
+  }
 }
 
 @media (max-width: map-get($breakpoints, mobile)) {
-    .logoContainer {
-        padding: 20px 0 20px 20px;
-    }
+  .logoContainer {
+    padding: 20px 0 20px 20px;
+  }
 }

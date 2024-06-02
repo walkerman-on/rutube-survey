@@ -9,10 +9,10 @@
 }
 
 .title {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 35px;
-    text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
 }
 
 .linksBlock {
@@ -23,26 +23,24 @@
 }
 
 .subtitle {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 22px;
-    text-align: center;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
 }
 
-@media (max-width: map-get($breakpoints, dekstop)) {}
-
 @media (max-width: map-get($breakpoints, tablet)) {
-    .NotFoundPage {
-        padding: 40px 20px 20px 20px;
-    }
+  .NotFoundPage {
+    padding: 40px 20px 20px;
+  }
 }
 
 @media (max-width: map-get($breakpoints, mobile)) {
-    .NotFoundPage {
-        padding: 40px 10px 10px 10px;
-    }
-    
-    .title {
-        font-size: 22px;
-    }
+  .NotFoundPage {
+    padding: 40px 10px 10px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
 }

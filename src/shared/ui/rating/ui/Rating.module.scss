@@ -1,75 +1,74 @@
-@import 'src/app/styles/variables/global.scss';
+@import "src/app/styles/variables/global.scss";
 
 .list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    gap: 8px
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 8px;
 }
 
 .listWrap {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 8px
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .listVertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 8px
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
 }
 
 .item {
-    font-size: 14px;
-    height: 40px;
-    width: 40px;
-    border: 1px solid var(--color-accent-200);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-sizing: border-box;
+  font-size: 14px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--color-accent-200);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .itemLong {
-    padding: 10px 16px;
-    width: 200px;
-    justify-content: flex-start;
+  padding: 10px 16px;
+  width: 200px;
+  justify-content: flex-start;
 }
 
 .item:hover {
-    background-color: var(--color-accent-200);
-    transition: background-color 0.3s ease
+  background-color: var(--color-accent-200);
+  transition: background-color 0.3s ease;
 }
 
 .itemActive {
-    background-color: var(--color-accent-200);
+  background-color: var(--color-accent-200);
 }
 
 .descriptionRating {
-    padding-top: 8px;
-    display: flex;
-    justify-content: space-between;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .label {
-    color: var(--color-primary-200);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: left;
+  color: var(--color-primary-200);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
 }
 
 @media (max-width: map-get($breakpoints, mobile)) {
-    .listWrap {
-            display: grid;
-            justify-content: center;
-            grid-template-columns: repeat(5, 40px);
-            grid-template-rows: repeat(2, 1fr);
-            row-gap: 10px;
-            column-gap: 5.75px;
-        }
+  .listWrap {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px 5.75px;
+  }
 }

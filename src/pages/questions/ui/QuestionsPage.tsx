@@ -1,7 +1,7 @@
-import { getCompletedSurvey, getResult } from 'app/providers/router/routeConfig/routes';
+import { getCompletedSurvey } from 'app/providers/router/routeConfig/routes';
 import { fetchQuestions } from 'entities/questions';
 import React, { useState, useEffect } from 'react';
-import { NavLink, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import PhoneImg from 'shared/assets/img/phone.svg';
 import { Button } from 'shared/ui/button/Button';
 import { useAppSelector } from 'shared/lib/hooks/useAppSelector/useAppSelector';
@@ -43,11 +43,11 @@ const QuestionsPage: React.FC = () => {
       <div className={cl.imgContainer}>
         <PhoneImg className={cl.icon} />
       </div>
-      <NavLink to={getResult()}>
-        <Button disabled={btnDisabled} onClick={handleButtonClick}>
-          Отправить ответы
-        </Button>
-      </NavLink>
+      {/* <NavLink to={getResult()}> */}
+      <Button disabled={btnDisabled} onClick={handleButtonClick}>
+        Отправить ответы
+      </Button>
+      {/* </NavLink> */}
     </main>
   );
 };
