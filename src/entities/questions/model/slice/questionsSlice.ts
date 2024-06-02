@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {IQuestionsState} from "../../types/types"
-import { fetchQuestions } from "entities/questions/api/fetchQuestions";
+import { fetchQuestions } from "../../api/fetchQuestions";
 
 const initialState:IQuestionsState = {
     list: [],

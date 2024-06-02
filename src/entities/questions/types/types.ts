@@ -1,5 +1,5 @@
 export interface IQuestion {
-    qiestionID: number,
+    questionID: number,
     title: string,
     responseVariants: [
         {

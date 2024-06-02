@@ -1,15 +1,13 @@
 @import 'src/app/styles/variables/global.scss';
 
-.Header {
-    padding: 28px 28px 0 0;
-}
-
 .logoContainer {
-    height: 40px;
+    padding: 28px 0;
     width: 148px;
-    margin-bottom: 37px;
 }
 
+.lineContainer {
+    padding: 9px 0;
+}
 
 .line {
     height: 2px;
@@ -17,33 +15,14 @@
     background: var(--color-accent-gradient);
 }
 
-@media (max-width: map-get($breakpoints, desktop)) {
-    .Header {
-        padding: 28px 28px 0 0;
-    }
-
-    .logoContainer {
-        margin-bottom: 37px;
-    }
-    
-}
-
 @media (max-width: map-get($breakpoints, tablet)) {
-    .Header {
-        padding: 20px 20px 0 0;
-    }
-
     .logoContainer {
-        margin: 0 0 29px 20px;
+        padding: 20px 0 20px 20px;
     }
 }
 
 @media (max-width: map-get($breakpoints, mobile)) {
-    .Header {
-        padding: 20px 20px 0 0;
-    }
-
     .logoContainer {
-        margin: 0 0 29px 20px;
+        padding: 20px 0 20px 20px;
     }
 }

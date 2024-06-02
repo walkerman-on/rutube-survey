@@ -22,7 +22,7 @@ const saveState = (state: IAnswersState) => {
         const serializedState = JSON.stringify(state);
         localStorage.setItem('answersState', serializedState);
     } catch {
-        console.log("Ошибка")
+        console.log("Ошибка при сохранении ответов")
     }
 };
 
@@ -30,16 +30,14 @@ export const answersSlice = createSlice({
     name: "answers",
     initialState: loadState() || initialState, 
     reducers: {
-        addAnswer: (state, action: PayloadAction<[questionID: number, answerID: number]>) => {
+        addAnswer: (state: IAnswersState, action: PayloadAction<[questionID: number, answerID: number]>) => {
             const [questionID, answerID] = action.payload;
-            const existingAnswerIndex = state.list.findIndex((answer:{ questionID?: number }) => answer?.questionID === questionID);
-
+            const existingAnswerIndex = state.list.findIndex((answer) => answer?.questionID === questionID);
             if (existingAnswerIndex !== -1) {
                 state.list[existingAnswerIndex].answerID = answerID;
             } else {
                 state.list.push({ questionID: questionID, answerID: answerID});
             }
-
             saveState(state); 
         }
     }

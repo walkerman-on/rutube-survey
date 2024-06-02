@@ -1,6 +1,6 @@
 import { FeedbackPage } from 'pages/feedback';
 import { AppRoutesProps } from './types';
-import { getFeedback, getQuestions, getMain, getNotFound, getResult, getCompletedSurvey } from 'app/providers/router/routeConfig/routes';
+import { getFeedback, getQuestions, getMain, getNotFound, getResult, getCompletedSurvey } from './routes';
 import { NotFoundPage } from 'pages/notFound';
 import { MainPage } from 'pages/main';
 import { ResultPage } from 'pages/result';
@@ -30,17 +30,9 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     path: RoutePath.feedback,
     element: <FeedbackPage />,
   },
-  [AppRoutes.NOT_FOUND]: {
-    path: RoutePath.not_found,
-    element: <NotFoundPage />,
-  },
   [AppRoutes.QUESTIONS]: {
     path: RoutePath.questions,
     element: <QuestionsPage />,
-  },
-  [AppRoutes.MAIN]: {
-    path: RoutePath.main,
-    element: <MainPage />,
   },
   [AppRoutes.RESULT]: {
     path: RoutePath.result,
@@ -50,4 +42,12 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     path: RoutePath.completed_survey,
     element: <CompletedSurveyPage />,
   },
+  [AppRoutes.MAIN]: {
+    path: RoutePath.main,
+    element: <MainPage />,
+  },
+  [AppRoutes.NOT_FOUND]: {
+    path: RoutePath.not_found,
+    element: <NotFoundPage />,
+  }
 };

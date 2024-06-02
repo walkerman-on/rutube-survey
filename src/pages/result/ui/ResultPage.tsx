@@ -22,8 +22,8 @@ const ResultPage = () => {
                 <ResultImg/>
             </div>
             <div className={cl.feedbackBlock}>
-                <p className={cl.firstText}>Спасибо за обратную связь!</p>
-                <p className={cl.secondText}>Это поможет нам улучшить сервис</p>
+                <h1 className={cl.title}>Спасибо за обратную связь!</h1>
+                <h2 className={cl.subtitle}>Это поможет нам улучшить сервис</h2>
                 <NavLink to={getMain()}>
                     <Button onClick={handleButtonClick}>Перейти на платформу</Button>
                 </NavLink>

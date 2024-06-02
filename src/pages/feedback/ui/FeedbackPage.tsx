@@ -1,13 +1,22 @@
 import cl from "./FeedbackPage.module.scss"
 import PeopleIcon from "shared/assets/img/people.svg"
-import { NavLink, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { getCompletedSurvey, getQuestions } from "app/providers/router/routeConfig/routes";
-import { Mark } from "widgets/mark";
 import { useQuestionsCompleted } from "shared/lib/hooks/useQuestionsCompited/useQuestionsCompited";
+import { useAppSelector } from "shared/lib/hooks/useAppSelector/useAppSelector";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { useEffect } from "react";
+import { fetchQuestions } from "entities/questions";
+import { FeedbackRateQuestions } from "features/feedbackRateQuestions/ui/FeedbackRateQuestions";
 
 
 const FeedbackPage = () => {
     const {isCompleted} = useQuestionsCompleted()
+    
+    const dispatch = useAppDispatch();
+    useEffect(() => {
+        dispatch(fetchQuestions());
+    }, [dispatch]);
 
     return isCompleted ? (
         <Navigate to={getCompletedSurvey()} />
@@ -17,18 +26,8 @@ const FeedbackPage = () => {
                 <PeopleIcon className={cl.peopleIcon}/>
             </div>
             <div className={cl.infoBlock}>
-                <p className={cl.firstText}>Уважаемый клиент!</p>
-                <p className={cl.secondText}>Запрос закрыт. Пожалуйста, оцените качество предоставленного сервиса 
-                    по данному обращению, используя шкалу от 0 до 9, где 0 является 
-                    «Хуже некуда» и 9 — «Отлично».
-                </p>
-                <div className={cl.markBlock}>
-                    <Mark linkTo={getQuestions()}/> 
-                    <p className={cl.markText}>
-                        <span className={cl.thirdText}>Хуже некуда</span>
-                        <span className={cl.thirdText}>Отлично</span>
-                    </p>
-                </div>
+                <h1 className={cl.title}>Уважаемый клиент!</h1>
+                <FeedbackRateQuestions />
             </div>
         </main>
     );

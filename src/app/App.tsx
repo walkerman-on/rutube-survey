@@ -1,17 +1,14 @@
 import { routeConfig } from './providers/router/routeConfig/appRouteConfig';
-import { AppRouter } from 'app/providers/router';
-import './styles/index.scss';
+import { AppRouter } from './providers/router';
 import { Header } from 'widgets/header';
-import classNames from 'classnames';
+import './styles/index.scss';
 
 const App = () => {
   return (
-    <div className={classNames('app container dark')}>
-      <Header/>
-      <>
+      <div className='app container dark'>
+        <Header/>
         {AppRouter(routeConfig)}
-      </>
-    </div>
+      </div>
   );
 };
 

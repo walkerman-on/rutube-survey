@@ -13,6 +13,7 @@ body {
     background: var(--bg-color);
     font: var(--font-m);
     color: var(--color-primary-100);
+    overflow-y: scroll;
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
 
 @media (max-width: map-get($breakpoints, dekstop)) {
     .container {
-            padding: 0 113.5px;
+            padding: 0;
         }
 }
 

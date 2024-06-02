@@ -6,12 +6,13 @@ export const fetchQuestions = createAsyncThunk<IQuestion[], void, {rejectValue: 
 	"fetchQuestions",
 	async (_, { rejectWithValue }) => {
 		try {
-      const response = await $api.get<IQuestion[]>(`/questions`);
+			const response = await $api.get<IQuestion[]>(`/questions`);
 
 	        if (!response.data) {
-        throw new Error();
-      }
-	  return response.data
+        		throw new Error();
+      		}
+		
+			return response.data
 
 		} catch (error) {
 			return rejectWithValue(error.message)

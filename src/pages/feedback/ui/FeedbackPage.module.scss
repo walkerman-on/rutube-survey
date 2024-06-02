@@ -1,7 +1,6 @@
 @import 'src/app/styles/variables/global.scss';
 
 .FeedbackPage {
-    padding-top: 21px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -14,24 +13,24 @@
     display: flex;
     flex-direction: column;
     gap: 28px;
-    max-width: 530px;
+    width: 550px;
 }
 
-.firstText {
+.title {
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
     text-align: center;
 }
 
-.secondText {
+.subtitle {
     font-size: 17px;
     font-weight: 400;
     line-height: 22px;
     text-align: center;
 }
 
-.thirdText {
+.label {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -39,47 +38,8 @@
 } 
 
 .iconContainer {
-    height: 200px;
+    padding: 12px 0;
     width: 455px;
-}
-
-
-.markBlock {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.markList {
-    display: grid;
-    grid-template-columns: repeat(10, 40px);
-    justify-content: space-between;
-    gap: 5px;
-}
-
-.markItem {
-    font-size: 14px;
-    height: 40px;
-    width: 40px;
-    border: 1px solid var(--color-accent-200);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.markItem:hover {
-    background-color: var(--color-accent-200);
-    transition: background-color 0.3s ease
-}
-
-.markText {
-    display: flex;
-    justify-content: space-between;
-}
-@media (max-width: map-get($breakpoints, dekstop)) {
-
 }
 
 @media (max-width: map-get($breakpoints, tablet)) {
@@ -91,25 +51,16 @@
 @media (max-width: map-get($breakpoints, mobile)) {
     .iconContainer {
         width: 374px;
-        height: 165px;
+        padding: 12px 0.5px;
     }
 
     .infoBlock {
+        padding: 10px 16px;
         gap: 14px;
-        max-width: 340px;
+        width: 343px;
     }
 
-    .firstText {
+    .title {
         font-size: 22px;
-    }
-
-    .secondText {
-        font-size: 12px;
-    }
-
-    .markText {
-        padding: 0 32px 0 32px;
-        display: flex;
-        justify-content: space-between;
     }
 }

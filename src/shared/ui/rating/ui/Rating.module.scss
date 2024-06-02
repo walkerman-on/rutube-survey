@@ -1,13 +1,27 @@
 @import 'src/app/styles/variables/global.scss';
 
-.markList {
-    display: grid;
-    grid-template-columns: repeat(10, 40px);
-    justify-content: space-between;
-    gap: 5px;
+.list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 8px
 }
 
-.markItem {
+.listWrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 8px
+}
+
+.listVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px
+}
+
+.item {
     font-size: 14px;
     height: 40px;
     width: 40px;
@@ -17,19 +31,41 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
-.markItem:hover {
+.itemLong {
+    padding: 10px 16px;
+    width: 200px;
+    justify-content: flex-start;
+}
+
+.item:hover {
     background-color: var(--color-accent-200);
     transition: background-color 0.3s ease
 }
 
-.markItemActive {
+.itemActive {
     background-color: var(--color-accent-200);
 }
 
+.descriptionRating {
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    color: var(--color-primary-200);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
 @media (max-width: map-get($breakpoints, mobile)) {
-    .markList {
+    .listWrap {
+            display: grid;
             justify-content: center;
             grid-template-columns: repeat(5, 40px);
             grid-template-rows: repeat(2, 1fr);
