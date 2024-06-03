@@ -7,13 +7,11 @@ import { useAppSelector } from 'shared/lib/hooks/useAppSelector/useAppSelector';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { fetchQuestions } from 'entities/questions';
 import { getCompletedSurvey, getMain, getResult } from 'app/providers/router/routeConfig/routes';
-import { useQuestionsCompleted } from 'shared/lib/hooks/useQuestionsCompited/useQuestionsCompited';
+import { useQuestionsCompleted } from 'shared/lib/hooks/useQuestionsCompleted/useQuestionsCompleted';
 import { QuestionsRateQuestions } from 'features/questionsRateQuestions';
 
 const QuestionsPage: React.FC = () => {
-            useEffect(() => {
-        document.title = "Дополнительные вопросы";
-        }, [])
+
     const { list, error } = useAppSelector((state) => state.questions);
     const answersList = useAppSelector((state) => state.answers.list);
     
@@ -28,17 +26,21 @@ const QuestionsPage: React.FC = () => {
         setBtnDisabled( answersList.length !== list?.length)
     }, [answersList, list]);
     
-    const {isCompleted} = useQuestionsCompleted()
+    const {isCompleted, isReviewed ,makeQuestionsCompleted} = useQuestionsCompleted()
 
     const navigate = useNavigate()
+                useEffect(() => {
+        document.title = "Дополнительные вопросы";
+        if (isCompleted && isReviewed) navigate(getCompletedSurvey())
+        }, [isCompleted, isReviewed])
+
     const handleButtonClick = () => {
-        console.log({ answersList });
+        makeQuestionsCompleted();
         navigate(getResult())
+        console.log({ answersList });
     };
 
-    return isCompleted ? (
-        <Navigate to={getCompletedSurvey()} />
-    ) : (
+    return (
         <main className={cl.QuestionsPage}>
             <section className={cl.questionsBlock}>
                 <h1 className={cl.title}>Пожалуйста, ответьте на дополнительные вопросы.</h1>

@@ -4,23 +4,26 @@ import ResultImg from "shared/assets/img/result.svg"
 import cl from "./ResultPage.module.scss"
 import { Button } from 'shared/ui/button/Button';
 import { getCompletedSurvey, getMain } from 'app/providers/router/routeConfig/routes';
-import { useQuestionsCompleted } from "shared/lib/hooks/useQuestionsCompited/useQuestionsCompited";
+import { useQuestionsCompleted } from "shared/lib/hooks/useQuestionsCompleted/useQuestionsCompleted";
 
 
 const ResultPage = () => {
+    const {isCompleted, isReviewed, makeResultReviewed} = useQuestionsCompleted()
+    const navigate = useNavigate()
         useEffect(() => {
         document.title = "Спасибо за обратную связь!";
+        if (isCompleted && isReviewed) {
+            navigate(getCompletedSurvey())
+        } else {
+            makeResultReviewed()
+        }
+
         }, [])
-    const {isCompleted, makeQuestionsCompleted} = useQuestionsCompleted()
-    const navigate = useNavigate()
+
     const handleButtonClick = () => {
-        makeQuestionsCompleted();
         navigate(getMain())
     };
-    
-    return isCompleted ? (
-        <Navigate to={getCompletedSurvey()} />
-    ) : (
+    return  (
         <main className={cl.ResultPage}>
             <div className={cl.imgContainer}>
                 <ResultImg/>

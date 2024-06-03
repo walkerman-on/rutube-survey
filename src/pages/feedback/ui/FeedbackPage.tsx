@@ -2,7 +2,7 @@ import cl from "./FeedbackPage.module.scss"
 import PeopleIcon from "shared/assets/img/people.svg"
 import { Navigate } from 'react-router-dom';
 import { getCompletedSurvey, getQuestions } from "app/providers/router/routeConfig/routes";
-import { useQuestionsCompleted } from "shared/lib/hooks/useQuestionsCompited/useQuestionsCompited";
+import { useQuestionsCompleted } from "shared/lib/hooks/useQuestionsCompleted/useQuestionsCompleted";
 import { useAppSelector } from "shared/lib/hooks/useAppSelector/useAppSelector";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useEffect } from "react";

@@ -6,10 +6,11 @@ import CompletedImg from "shared/assets/img/completed.svg"
 import { useEffect } from "react";
 
 const CompletedSurveyPage = () => {
-                useEffect(() => {
+              
+    const navigate = useNavigate()
+      useEffect(() => {
         document.title = "Опрос завершен";
         }, [])
-    const navigate = useNavigate()
     const handleButtonClick = () => {
         navigate(getMain())
     };
@@ -22,9 +23,7 @@ const CompletedSurveyPage = () => {
             <div className={cl.feedbackBlock}>
                 <h1 className={cl.title}>Вы уже прошли этот опрос</h1>
                 <h2 className={cl.subtitle}>Спасибо, что делитесь мнением и помогаете нам быть лучше</h2>
-                <NavLink to={getMain()}>
-                    <Button onClick={handleButtonClick}>Перейти на платформу</Button>
-                </NavLink>
+                <Button onClick={handleButtonClick}>Перейти на RUTUBE</Button>
             </div>
         </main>
     );
