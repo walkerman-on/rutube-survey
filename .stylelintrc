@@ -1,0 +1,11 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier-scss"],
+  "rules": {
+    "selector-class-pattern": null,
+    "scss/no-global-function-names": null,
+    "scss/at-import-partial-extension": null,
+    "selector-not-notation": null,
+    "custom-property-empty-line-before": null,
+    "import-notation": null
+  }
+}
