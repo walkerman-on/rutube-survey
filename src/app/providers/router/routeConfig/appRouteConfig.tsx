@@ -1,19 +1,26 @@
-import { FeedbackPage } from 'pages/feedback';
-import { AppRoutesProps } from './types';
-import { getFeedback, getQuestions, getMain, getNotFound, getResult, getCompletedSurvey } from './routes';
-import { NotFoundPage } from 'pages/notFound';
-import { MainPage } from 'pages/main';
-import { ResultPage } from 'pages/result';
-import { QuestionsPage } from 'pages/questions';
-import { CompletedSurveyPage } from 'pages/completedSurvey';
+import { FeedbackPage } from "pages/feedback";
+import { AppRoutesProps } from "./types";
+import {
+  getFeedback,
+  getQuestions,
+  getMain,
+  getNotFound,
+  getResult,
+  getCompletedSurvey,
+} from "./routes";
+import { NotFoundPage } from "pages/notFound";
+import { MainPage } from "pages/main";
+import { ResultPage } from "pages/result";
+import { QuestionsPage } from "pages/questions";
+import { CompletedSurveyPage } from "pages/CompletedSurvey";
 
 export enum AppRoutes {
-  FEEDBACK = 'feedback',
-  QUESTIONS = 'questions',
-  RESULT = 'result',
-  COMPLETED_SURVEY = 'completed_survey',
-  MAIN = 'main',
-  NOT_FOUND = 'not_found',
+  FEEDBACK = "feedback",
+  QUESTIONS = "questions",
+  RESULT = "result",
+  COMPLETED_SURVEY = "completed_survey",
+  MAIN = "main",
+  NOT_FOUND = "not_found",
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
@@ -49,5 +56,5 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.NOT_FOUND]: {
     path: RoutePath.not_found,
     element: <NotFoundPage />,
-  }
+  },
 };

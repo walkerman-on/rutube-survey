@@ -40,10 +40,12 @@
     justify-content: flex-start;
 }
 
-.item:hover {
+.item:hover,
+.item:active {
     background-color: var(--color-accent-200);
     transition: background-color 0.3s ease
 }
+
 
 .itemActive {
     background-color: var(--color-accent-200);

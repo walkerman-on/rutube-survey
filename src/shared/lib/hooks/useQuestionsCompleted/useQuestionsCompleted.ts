@@ -1,39 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from "react";
 
 export interface IQuestionsCompletedReturn {
   isCompleted: boolean;
-  isReviewed: boolean,
-  makeQuestionsCompleted: () => void,
-  makeResultReviewed: () => void,
+  isReviewed: boolean;
+  makeQuestionsCompleted: () => void;
+  makeResultReviewed: () => void;
 }
 
-export const useQuestionsCompleted = ():IQuestionsCompletedReturn => {
-    const [completed, setCompleted] = useState(false);
-    const [reviewed, setReviewed] = useState(false);
-    
-    useEffect(() => {
-        const questionsCompleted = localStorage.getItem('questionsCompleted');
-        const resultReviewed = localStorage.getItem('resultReviewed');
-        questionsCompleted === 'true' && setCompleted(true);
-        resultReviewed === 'true' && setReviewed(true);
-        console.log({questionsCompleted, resultReviewed})
-    }, []);
+export const useQuestionsCompleted = (): IQuestionsCompletedReturn => {
+  const questionsCompleted = localStorage.getItem("questionsCompleted");
+  const resultReviewed = localStorage.getItem("resultReviewed");
 
-    const makeResultReviewed = () => {
-        localStorage.setItem('resultReviewed', 'true');
-        setReviewed(true);
-    };
+  const [completed, setCompleted] = useState(questionsCompleted === "true");
+  const [reviewed, setReviewed] = useState(resultReviewed === "true");
 
-    const makeQuestionsCompleted = () => {
-        localStorage.setItem('questionsCompleted', 'true');
-        setCompleted(true);
-    };
-        console.log({completed, reviewed})
+  const makeResultReviewed = () => {
+    localStorage.setItem("resultReviewed", "true");
+    setReviewed(true);
+  };
 
-    return {
-        isCompleted: completed,
-        isReviewed: reviewed,
-        makeQuestionsCompleted: makeQuestionsCompleted,
-        makeResultReviewed: makeResultReviewed,
-    }
-}
+  const makeQuestionsCompleted = () => {
+    localStorage.setItem("questionsCompleted", "true");
+    setCompleted(true);
+  };
+
+  return {
+    isCompleted: completed,
+    isReviewed: reviewed,
+    makeQuestionsCompleted: makeQuestionsCompleted,
+    makeResultReviewed: makeResultReviewed,
+  };
+};
