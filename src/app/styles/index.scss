@@ -12,6 +12,7 @@ body {
     height: 100vh;
     background: var(--bg-color);
     font: var(--font-m);
+    text-align: center;
     color: var(--color-primary-100);
     overflow-y: scroll;
 }
@@ -26,6 +27,29 @@ body {
     .container {
             padding: 0;
         }
+}
+
+@media (max-width: map-get($breakpoints, tablet)) {
+    .container {
+        padding: 0;
+    }
+}
+
+@media (max-width: map-get($breakpoints, mobile)) {
+    .container {
+        padding: 0;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: map-get($breakpoints, dekstop)) {
+    .container {
+        padding: 0 113.5px;
+    }
 }
 
 @media (max-width: map-get($breakpoints, tablet)) {

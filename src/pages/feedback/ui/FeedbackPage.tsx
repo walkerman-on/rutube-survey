@@ -11,6 +11,9 @@ import { FeedbackRateQuestions } from "features/feedbackRateQuestions/ui/Feedbac
 
 
 const FeedbackPage = () => {
+            useEffect(() => {
+        document.title = "Оценка качества";
+        }, [])
     const {isCompleted} = useQuestionsCompleted()
     
     const dispatch = useAppDispatch();

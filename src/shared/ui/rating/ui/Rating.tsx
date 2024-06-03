@@ -22,17 +22,16 @@ export const Rating:FC<IRating> = ({list, onClick, wrap, long, description}) => 
     return (
        <>
         <ul className={classNames("", {[cl.listWrap]: wrap, [cl.list]: !wrap}, {[cl.listVertical]: long})}>
-            {
-                list?.map((item, index) =>
+           {
+                list?.map((item) =>
                   <li 
                       className={classNames(cl.item, { [cl.itemActive]: item.id === selectedAnswer, [cl.itemLong]: item?.title.length > 2})} 
-                      key={index} 
+                      key={item.id} 
                       onClick={() => handleButtonClick(item.id)}
                   >
                       {item.title}
                   </li>)
             }
-            
         </ul>
         { description &&
             <p className={cl.descriptionRating}>

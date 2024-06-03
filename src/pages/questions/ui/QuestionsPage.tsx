@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Navigate } from 'react-router-dom';
+import { NavLink, Navigate, useNavigate } from 'react-router-dom';
 import cl from './QuestionsPage.module.scss';
 import PhoneImg from 'shared/assets/img/phone.svg';
 import { Button } from 'shared/ui/button/Button';
@@ -11,6 +11,9 @@ import { useQuestionsCompleted } from 'shared/lib/hooks/useQuestionsCompited/use
 import { QuestionsRateQuestions } from 'features/questionsRateQuestions';
 
 const QuestionsPage: React.FC = () => {
+            useEffect(() => {
+        document.title = "Дополнительные вопросы";
+        }, [])
     const { list, error } = useAppSelector((state) => state.questions);
     const answersList = useAppSelector((state) => state.answers.list);
     
@@ -22,13 +25,15 @@ const QuestionsPage: React.FC = () => {
     }, [dispatch]);
     
     useEffect(() => {
-        answersList.length === list?.length ?  setBtnDisabled(false) : setBtnDisabled(true)
-    }, [answersList]);
+        setBtnDisabled( answersList.length !== list?.length)
+    }, [answersList, list]);
     
     const {isCompleted} = useQuestionsCompleted()
 
+    const navigate = useNavigate()
     const handleButtonClick = () => {
         console.log({ answersList });
+        navigate(getResult())
     };
 
     return isCompleted ? (
@@ -43,12 +48,9 @@ const QuestionsPage: React.FC = () => {
             <div className={cl.imgContainer}>
                 <PhoneImg className={cl.icon} />
             </div>
-            <NavLink to={getResult()}>
-                <Button disabled={btnDisabled} onClick={handleButtonClick}>
-                    Отправить ответы
-                </Button>
-            </NavLink>
-
+            <Button disabled={btnDisabled} onClick={handleButtonClick}>
+                Отправить ответы
+            </Button>
         </main>
     );
 };

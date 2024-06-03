@@ -5,7 +5,7 @@ import { NotFoundPage } from 'pages/notFound';
 import { MainPage } from 'pages/main';
 import { ResultPage } from 'pages/result';
 import { QuestionsPage } from 'pages/questions';
-import { CompletedSurveyPage } from 'pages/CompletedSurvey';
+import { CompletedSurveyPage } from 'pages/completedSurvey';
 
 export enum AppRoutes {
   FEEDBACK = 'feedback',

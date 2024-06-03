@@ -1,5 +1,5 @@
-import React from 'react';
-import {NavLink, Navigate} from "react-router-dom"
+import React, { useEffect } from 'react';
+import {Navigate, useNavigate} from "react-router-dom"
 import ResultImg from "shared/assets/img/result.svg"
 import cl from "./ResultPage.module.scss"
 import { Button } from 'shared/ui/button/Button';
@@ -8,10 +8,14 @@ import { useQuestionsCompleted } from "shared/lib/hooks/useQuestionsCompited/use
 
 
 const ResultPage = () => {
+        useEffect(() => {
+        document.title = "Спасибо за обратную связь!";
+        }, [])
     const {isCompleted, makeQuestionsCompleted} = useQuestionsCompleted()
-
+    const navigate = useNavigate()
     const handleButtonClick = () => {
         makeQuestionsCompleted();
+        navigate(getMain())
     };
     
     return isCompleted ? (
@@ -24,9 +28,7 @@ const ResultPage = () => {
             <div className={cl.feedbackBlock}>
                 <h1 className={cl.title}>Спасибо за обратную связь!</h1>
                 <h2 className={cl.subtitle}>Это поможет нам улучшить сервис</h2>
-                <NavLink to={getMain()}>
-                    <Button onClick={handleButtonClick}>Перейти на платформу</Button>
-                </NavLink>
+                <Button onClick={handleButtonClick}>Перейти на платформу</Button>
             </div>
         </main>
     );

@@ -4,18 +4,18 @@ import { useAppSelector } from 'shared/lib/hooks/useAppSelector/useAppSelector';
 import { RateQuestion } from 'widgets/rateQuestion';
 import cl from "./FeedbackRateQuestions.module.scss"
 
-//ID вопроса, который должен быть на этой странице
-const ID = 0
+//ID вопросов, которые ДОЛЖНЫ быть на этой странице
+const IDs = [0]
 
 export const FeedbackRateQuestions:FC = () => {
     const {list} = useAppSelector(state => state?.questions)
-    const questions = list.filter(item => item?.questionID === ID);
+    const questions = list.filter(item => IDs.includes(item?.questionID));
     
     return (
         <>
             {
-                questions?.map((item, index) => (
-                    <RateQuestion question={item} key={index} linkTo={getQuestions()} wrap description labelWrap/>
+                questions?.map((item) => (
+                    <RateQuestion question={item} key={item. questionID} linkTo={getQuestions()} wrap description labelWrap/>
                 ))
             }
         </>

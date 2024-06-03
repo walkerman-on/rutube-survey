@@ -33,13 +33,13 @@
 
 @media (max-width: map-get($breakpoints, tablet)) {
     .NotFoundPage {
-        padding: 40px 20px 20px 20px;
-    }
+            padding: 40px 20px 20px;
+        }
 }
 
 @media (max-width: map-get($breakpoints, mobile)) {
     .NotFoundPage {
-        padding: 40px 10px 10px 10px;
+        padding: 40px 10px 10px;
     }
     
     .title {

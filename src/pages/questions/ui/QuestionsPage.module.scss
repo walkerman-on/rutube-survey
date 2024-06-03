@@ -1,7 +1,7 @@
 @import 'src/app/styles/variables/global.scss';
 
 .QuestionsPage {
-    padding: 16px 0 24px 0;
+    padding: 16px 0 24px;
     flex: 1;
     position: relative;
     display: flex;
@@ -22,7 +22,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 28px;
-    max-width: 520px;
     z-index: 1;
 }
 
@@ -36,7 +35,7 @@
 
 @media (max-width: map-get($breakpoints, tablet)) {
     .QuestionsPage {
-        padding: 16px 16px 24px 16px;
+        padding: 16px 16px 24px;
     }
 
     .imgContainer {
@@ -46,7 +45,7 @@
 
 @media (max-width: map-get($breakpoints, mobile)) {
     .QuestionsPage {
-        padding: 16px 16px 24px 16px;
+        padding: 16px 16px 24px;
     }
 
     .imgContainer {
