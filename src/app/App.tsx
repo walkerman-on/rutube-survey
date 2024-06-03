@@ -5,10 +5,10 @@ import './styles/index.scss';
 
 const App = () => {
   return (
-      <div className='app container dark'>
-        <Header/>
-        {AppRouter(routeConfig)}
-      </div>
+    <div className="app container dark">
+      <Header />
+      {AppRouter(routeConfig)}
+    </div>
   );
 };
 

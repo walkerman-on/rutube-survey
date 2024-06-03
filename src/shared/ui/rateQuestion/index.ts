@@ -1,3 +1,3 @@
-export { RateQuestion } from "./ui/RateQuestion";
+export { RateQuestion } from './ui/RateQuestion';
 
-export type { IRateQuestion } from "./types/types";
+export type { IRateQuestion } from './types/types';

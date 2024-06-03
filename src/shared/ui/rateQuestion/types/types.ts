@@ -1,4 +1,4 @@
-import { IQuestion } from "entities/questions";
+import { IQuestion } from 'entities/questions';
 
 export interface IRateQuestion extends IQuestion {
   answerID: number;

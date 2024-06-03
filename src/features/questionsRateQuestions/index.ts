@@ -1,1 +1,1 @@
-export {QuestionsRateQuestions} from "./ui/QuestionsRateQuestions"
+export { QuestionsRateQuestions } from './ui/QuestionsRateQuestions';

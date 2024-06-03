@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export interface IQuestionsCompletedReturn {
   isCompleted: boolean;
@@ -8,19 +8,19 @@ export interface IQuestionsCompletedReturn {
 }
 
 export const useQuestionsCompleted = (): IQuestionsCompletedReturn => {
-  const questionsCompleted = localStorage.getItem("questionsCompleted");
-  const resultReviewed = localStorage.getItem("resultReviewed");
+  const questionsCompleted = localStorage.getItem('questionsCompleted');
+  const resultReviewed = localStorage.getItem('resultReviewed');
 
-  const [completed, setCompleted] = useState(questionsCompleted === "true");
-  const [reviewed, setReviewed] = useState(resultReviewed === "true");
+  const [completed, setCompleted] = useState(questionsCompleted === 'true');
+  const [reviewed, setReviewed] = useState(resultReviewed === 'true');
 
   const makeResultReviewed = () => {
-    localStorage.setItem("resultReviewed", "true");
+    localStorage.setItem('resultReviewed', 'true');
     setReviewed(true);
   };
 
   const makeQuestionsCompleted = () => {
-    localStorage.setItem("questionsCompleted", "true");
+    localStorage.setItem('questionsCompleted', 'true');
     setCompleted(true);
   };
 

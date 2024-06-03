@@ -1,6 +1,6 @@
-import { FC, useState } from "react";
-import cl from "./Rating.module.scss";
-import classNames from "classnames";
+import { FC, useState } from 'react';
+import cl from './Rating.module.scss';
+import classNames from 'classnames';
 
 interface IRating {
   list: { id: number; title: string }[];
@@ -11,17 +11,8 @@ interface IRating {
   description?: boolean;
 }
 
-export const Rating: FC<IRating> = ({
-  list,
-  answerID,
-  onClick,
-  wrap,
-  long,
-  description,
-}) => {
-  const [selectedAnswer, setSelectedAnswer] = useState<number | undefined>(
-    answerID
-  );
+export const Rating: FC<IRating> = ({ list, answerID, onClick, wrap, long, description }) => {
+  const [selectedAnswer, setSelectedAnswer] = useState<number | undefined>(answerID);
 
   const handleButtonClick = (id: number) => {
     setSelectedAnswer(id);
@@ -30,13 +21,7 @@ export const Rating: FC<IRating> = ({
 
   return (
     <>
-      <ul
-        className={classNames(
-          "",
-          { [cl.listWrap]: wrap, [cl.list]: !wrap },
-          { [cl.listVertical]: long }
-        )}
-      >
+      <ul className={classNames('', { [cl.listWrap]: wrap, [cl.list]: !wrap }, { [cl.listVertical]: long })}>
         {list?.map((item) => (
           <li
             className={classNames(cl.item, {

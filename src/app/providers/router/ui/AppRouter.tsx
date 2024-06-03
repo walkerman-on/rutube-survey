@@ -7,12 +7,8 @@ const AppRouter = (config: Record<any, AppRoutesProps>) => {
   return (
     <Suspense fallback={<PageLoader />}>
       <Routes>
-        {Object.values(config).map(({ element, path}) => (
-          <Route
-            key={path}
-            path={path}
-            element={element}
-          />
+        {Object.values(config).map(({ element, path }) => (
+          <Route key={path} path={path} element={element} />
         ))}
       </Routes>
     </Suspense>

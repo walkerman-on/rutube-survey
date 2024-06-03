@@ -1,22 +1,19 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import ResultImg from "shared/assets/img/result.svg";
-import cl from "./ResultPage.module.scss";
-import { Button } from "shared/ui/button/Button";
-import {
-  getCompletedSurvey,
-  getMain,
-} from "app/providers/router/routeConfig/routes";
-import { useQuestionsCompleted } from "shared/lib/hooks/useQuestionsCompleted/useQuestionsCompleted";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import ResultImg from 'shared/assets/img/result.svg';
+import cl from './ResultPage.module.scss';
+import { Button } from 'shared/ui/button/Button';
+import { getCompletedSurvey, getMain } from 'app/providers/router/routeConfig/routes';
+
+import { useQuestionsCompleted } from 'shared/lib/hooks/useQuestionsCompleted/useQuestionsCompleted';
 
 const ResultPage = () => {
   const navigate = useNavigate();
 
-  const { isCompleted, isReviewed, makeResultReviewed } =
-    useQuestionsCompleted();
+  const { isCompleted, isReviewed, makeResultReviewed } = useQuestionsCompleted();
 
   useEffect(() => {
-    document.title = "Спасибо за обратную связь!";
+    document.title = 'Спасибо за обратную связь!';
 
     if (isCompleted && isReviewed) {
       navigate(getCompletedSurvey());

@@ -1,8 +1,8 @@
-import { FC } from "react";
-import cl from "./RateQuestion.module.scss";
-import classNames from "classnames";
-import { Rating } from "shared/ui/rating";
-import { IRateQuestion } from "shared/ui/rateQuestion/types/types";
+import { FC } from 'react';
+import cl from './RateQuestion.module.scss';
+import classNames from 'classnames';
+import { Rating } from 'shared/ui/rating';
+import { IRateQuestion } from 'shared/ui/rateQuestion/types/types';
 
 interface IRateQuestionProps {
   question: IRateQuestion;
@@ -12,13 +12,7 @@ interface IRateQuestionProps {
   description?: boolean;
 }
 
-export const RateQuestion: FC<IRateQuestionProps> = ({
-  question,
-  onHandleClick,
-  wrap,
-  labelWrap,
-  description,
-}) => {
+export const RateQuestion: FC<IRateQuestionProps> = ({ question, onHandleClick, wrap, labelWrap, description }) => {
   const list = question.responseVariants.map((item) => ({
     ...item,
     id: item.responseVariantID,
@@ -38,11 +32,7 @@ export const RateQuestion: FC<IRateQuestionProps> = ({
       >
         {question?.title}
       </p>
-      <Rating
-        answerID={question.answerID}
-        long={question.long}
-        {...{ wrap, list, description, onClick }}
-      />
+      <Rating answerID={question.answerID} long={question.long} {...{ wrap, list, description, onClick }} />
     </div>
   );
 };

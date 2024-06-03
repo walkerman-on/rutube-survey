@@ -1,2 +1,2 @@
-export { default as answersReducer } from "./model/slice/answersSlice";
-export * from "./types/types";
+export { default as answersReducer } from './model/slice/answersSlice';
+export * from './types/types';

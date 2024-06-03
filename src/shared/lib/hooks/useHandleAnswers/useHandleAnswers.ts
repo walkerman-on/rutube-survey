@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { IAnswer } from "entities/answers/types/types";
+import { useState } from 'react';
+import { IAnswer } from 'entities/answers/types/types';
 
 export interface IQuestionsCompletedReturn {
   answerState: IAnswer;
@@ -7,14 +7,12 @@ export interface IQuestionsCompletedReturn {
 }
 
 export const useHandleAnswers = (): IQuestionsCompletedReturn => {
-  const localStorageAnswerState = JSON.parse(
-    localStorage.getItem("answersState")
-  );
+  const localStorageAnswerState = JSON.parse(localStorage.getItem('answersState'));
 
   const [answerState, setAnswerState] = useState(localStorageAnswerState);
 
   const setLocalStorageAnswerState = (state: IAnswer) => {
-    localStorage.setItem("answersState", JSON.stringify(state));
+    localStorage.setItem('answersState', JSON.stringify(state));
     setAnswerState(state);
   };
 

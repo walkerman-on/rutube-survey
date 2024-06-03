@@ -1,8 +1,8 @@
 export interface IAnswer {
-    questionID: number,
-    answerID: number,
+  questionID: number;
+  answerID: number;
 }
 
 export interface IAnswersState {
-    list: IAnswer[],
+  list: IAnswer[];
 }

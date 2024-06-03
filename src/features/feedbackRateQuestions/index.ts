@@ -1,1 +1,1 @@
-export { FeedbackRateQuestions } from "./ui/FeedbackRateQuestions";
+export { FeedbackRateQuestions } from './ui/FeedbackRateQuestions';

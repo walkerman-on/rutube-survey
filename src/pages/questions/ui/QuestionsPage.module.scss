@@ -1,54 +1,53 @@
-@import 'src/app/styles/variables/global.scss';
+@import "src/app/styles/variables/global.scss";
 
 .QuestionsPage {
-    padding: 16px 0 24px;
-    flex: 1;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+  padding: 16px 0 24px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .title {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 22px;
-    text-align: left;
-    color: var(--color-primary-200)
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: var(--color-primary-200);
 }
 
 .questionsBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  z-index: 1;
 }
 
-
 .imgContainer {
-    position: absolute;
-    right: 0;
-    top: 15%;
-    width: 581px;
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 581px;
 }
 
 @media (max-width: map-get($breakpoints, tablet)) {
-    .QuestionsPage {
-        padding: 16px 16px 24px;
-    }
+  .QuestionsPage {
+    padding: 16px 16px 24px;
+  }
 
-    .imgContainer {
-        width: 548px;
-    }
+  .imgContainer {
+    width: 548px;
+  }
 }
 
 @media (max-width: map-get($breakpoints, mobile)) {
-    .QuestionsPage {
-        padding: 16px 16px 24px;
-    }
+  .QuestionsPage {
+    padding: 16px 16px 24px;
+  }
 
-    .imgContainer {
-        display: none;
-    }
+  .imgContainer {
+    display: none;
+  }
 }

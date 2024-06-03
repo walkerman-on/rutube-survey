@@ -1,27 +1,36 @@
-import cl from "./FeedbackPage.module.scss";
-import PeopleIcon from "shared/assets/img/people.svg";
-import { Navigate } from "react-router-dom";
-import { getCompletedSurvey } from "app/providers/router/routeConfig/routes";
-import { useQuestionsCompleted } from "shared/lib/hooks/useQuestionsCompleted/useQuestionsCompleted";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { useEffect } from "react";
-import { fetchQuestions } from "entities/questions";
-import { FeedbackRateQuestions } from "features/feedbackRateQuestions";
+import cl from './FeedbackPage.module.scss';
+import PeopleIcon from 'shared/assets/img/people.svg';
+import { useNavigate } from 'react-router-dom';
+import { getCompletedSurvey } from 'app/providers/router/routeConfig/routes';
+import { useQuestionsCompleted } from 'shared/lib/hooks/useQuestionsCompleted/useQuestionsCompleted';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useEffect } from 'react';
+import { fetchQuestions } from 'entities/questions';
+import { FeedbackRateQuestions } from 'features/feedbackRateQuestions';
 
 const FeedbackPage = () => {
-  useEffect(() => {
-    document.title = "Оценка качества";
-  }, []);
-  const { isCompleted } = useQuestionsCompleted();
-
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
+
+  const { isCompleted, isReviewed } = useQuestionsCompleted();
+
+  useEffect(() => {
+    document.title = 'Оценка качества';
+
+    if (isCompleted && isReviewed) {
+      navigate(getCompletedSurvey());
+    }
+  }, [isCompleted, isReviewed]);
+
   useEffect(() => {
     dispatch(fetchQuestions());
   }, [dispatch]);
 
-  return isCompleted ? (
-    <Navigate to={getCompletedSurvey()} />
-  ) : (
+  if (isCompleted && isReviewed) {
+    return null;
+  }
+
+  return (
     <main className={cl.FeedbackPage}>
       <div className={cl.iconContainer}>
         <PeopleIcon className={cl.peopleIcon} />

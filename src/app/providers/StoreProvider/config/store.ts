@@ -5,6 +5,6 @@ import { answersReducer } from 'entities/answers';
 export const store = configureStore({
   reducer: {
     questions: questionsReducer,
-    answers: answersReducer
+    answers: answersReducer,
   },
 });

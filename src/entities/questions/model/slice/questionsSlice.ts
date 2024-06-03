@@ -1,6 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { IQuestionsState } from "../../types/types";
-import { fetchQuestions } from "../../api/fetchQuestions";
+import { createSlice } from '@reduxjs/toolkit';
+import { IQuestionsState } from '../../types/types';
+import { fetchQuestions } from '../../api/fetchQuestions';
 
 const initialState: IQuestionsState = {
   list: [],
@@ -9,7 +9,7 @@ const initialState: IQuestionsState = {
 };
 
 export const questionsSlice = createSlice({
-  name: "questions",
+  name: 'questions',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
